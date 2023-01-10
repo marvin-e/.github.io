@@ -236,6 +236,13 @@ a {
     height: 350px;
 }
 
+.readme {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 275px;
+}
+
 #userInfo {
     display: flex;
     justify-content: space-evenly;
