@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap" rel="stylesheet">
+    <title>Marvin Estevez : Full Stack Developer</title>
+</head>
+<body>
+  <header class="header">
+    <h1 class ="logo"><a href="#spaceDiv1">Marvin Estevez</a></h1>
+       <ul class="main-nav">
+         <li><a href="#spaceDiv2">Bio</a></li>
+         <li><a href="#techStack">TechStack</a></li>
+         <li><a href="#youtubeVideo">Video about myself</a></li>
+         <li><a href="#spaceDiv3">Projects</a></li>
+         <li><a href="#userInfo">Contact</a></li>
+      </ul>
+    </header>
+    <div id="spaceDiv1"></div>
+  <main id="main">
+    <div class="profilePicContainer">
+      <img src="./profilePic.jpg" class="profilePic">
+    </div>
+  <div id="spaceDiv2"></div>
+    <div class="mainLogo">
+      <img src="./logo.png" class="mainLogoImage" alt="Landing page logo">
+    </div>
+    <div id="bio">
+      <h2>Hi there! <span class="wave">👋🏼</span></h2>
+      <p>I've always been interested in computers and am now studying to become a Full Stack Web Developer.<br>
+      I am learning to work with the MERN stack and have experience with HTML 5 and CSS 3. <br>
+      Below you will find a video introduction of myself as well as projects that I've worked on.
+      </p>
+    </div>
+    <div id="techstack">
+    </div>
+    <div id="youtubeVideo">
+    </div>
+    <div id="spaceDiv3"></div>
+    <div class="projectsHeader" id="projectsHeader">Projects</div>
+    <div id="projects">
+      <a href="https://marvin-e.github.io/pacman/PacMan.html">
+      <div class="project1"><img src="./marvin-e.github.io/marvin-e.github.io/PacMan Exercise/PacMan1.png" class="pacman" alt="Pacman"></div>
+      </a>
+      <a href="https://marvin-e.github.io/trainStops/trainStops.html">
+      <div class="project2"><img src="./marvin-e.github.io/marvin-e.github.io/trainStops/thomas.png" class="thomas" alt="Path Train stops to New York City"></div>
+      </a>
+      <a href="https://marvin-e.github.io/eyeMovement/eyeMovement.html">
+      <div class="project3"><img src="./marvin-e.github.io/marvin-e.github.io/eyeMovement/eyeMovement.png" class="eyeMovement" alt="Eye movement program"></div>
+      </a>
+    </div>
+    <div class="contactHeader">Send a Message</div>
+
+
+
+    <form action="https://formspree.io/f/xgebelwy" method="POST" id="my-form">
+    <div id="userInfo">
+          <input type="text" id="name" name="name" class="userInput" placeholder="Name*" required>
+          <input type="text" id="email" name="email" class="userInput" placeholder="Email*" required>
+        </div>
+    <div class="comments">
+      <textarea class="textbox" id="message" name="message" placeholder="Message*" rows="5" required></textarea>
+    </div>
+    <div class="submitButton">
+      <input type="submit" value="Send">
+    </div>
+    </form>
+    <div id="status"></div>
+
+
+    <div>
+      <footer id="footer">
+          &#169 Marvin Estevez
+        </footer>
+    </div>
+  </main>
+
+</body>
+
+
+
+<script>
+  var asciiArt =      " _______________________________  \n";
+  asciiArt +=         "/ \                             \.  \n";
+  asciiArt +=         " |                              |. \n";
+  asciiArt +=         "/ \                             \.  \n";
+  asciiArt +=         "\_ |                            |.  \n";
+  asciiArt +=         "   |          Marvins           |. \n";
+  asciiArt +=         "   |          Developer         |. \n";
+  asciiArt +=         "   |          Page              |. \n";
+  asciiArt +=         "   |                            |. \n";
+  asciiArt +=         "   |                            |. \n";
+  asciiArt +=         "   |                            |. \n";
+  asciiArt +=         "   |                            |. \n";
+  asciiArt +=         "   |                            |. \n";
+  asciiArt +=         "   |                            |. \n";
+  asciiArt +=         "   |                            |. \n";
+  asciiArt +=         "   |                            |. \n";
+  asciiArt +=         "   |   _________________________|___   \n";
+  asciiArt +=         "   |  /                            /.  \n";
+  asciiArt +=         "   \_/____________________________/.   \n";
+
+  console.log(asciiArt);
+</script>
+
+<script>
+  window.onload = function() {
+  window.scrollTo(0, 0);
+}
+</script>
+
+<script>
+  function removeScrollPositionFromUrl() {
+  if (window.location.href !== window.location.origin) {
+    window.history.replaceState({}, "", window.location.origin);
+  }
+}
+</script>
+
+<script>
+  window.onscroll = function() {
+  removeScrollPositionFromUrl();
+  }
+</script>
+
+
+    <script>
+
+          var defaultTitle = document.title;
+          var blurTitle = "Enjoy Surfing the Web!";
+
+          window.onfocus = () => 
+            document.title = defaultTitle;
+
+          window.onblur = () =>
+            document.title = blurTitle;
+    </script>
+
+    <script>
+     var form = document.getElementById("my-form");
+    
+    async function handleSubmit(event) {
+      event.preventDefault();
+      var status = document.getElementById("status");
+      var data = new FormData(event.target);
+      fetch(event.target.action, {
+        method: form.method,
+        body: data,
+        headers: {
+            'Accept': 'application/json'
+        }
+      }).then(response => {
+        if (response.ok) {
+          status.innerHTML = alert("Thanks for your submission!");
+          form.reset()
+        } else {
+          response.json().then(data => {
+            if (Object.hasOwn(data, 'errors')) {
+              status.innerHTML = alert(data["errors"].map(error => error["message"]).join(", "))
+            } else {
+              status.innerHTML = alert("Oops! There was a problem submitting your form")
+            }
+          })
+        }
+      }).catch(error => {
+        status.innerHTML = alert("Oops! There was a problem submitting your form")
+      });
+    }
+    form.addEventListener("submit", handleSubmit)
+
+    </script>
+  
+
+
+</html>

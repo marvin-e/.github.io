@@ -1,0 +1,288 @@
+html {
+    scroll-behavior: smooth;
+    background-color: white;
+}
+
+main {
+    margin: 7vw auto;
+    max-width: 90vw;
+}
+
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: 'Source Code Pro', monospace;
+	line-height: 1.6;
+	margin: 0;
+	min-height: 100vh;
+    overflow-x: hidden;
+}
+
+#spaceDiv1,
+#spaceDiv2,
+#spaceDiv3,
+#spaceDiv4 {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    height:25px;;
+    width: 100%;
+    border: 5px black;
+}
+
+#spaceDiv2 {
+    margin: 4em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+	color: #34495e;
+    text-decoration: none;
+}
+
+.logo {
+	margin: 0;
+	font-size: 25px;
+}
+
+.main-nav {
+	margin-top: 5px;
+
+}
+.logo a,
+.main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+.main-nav a {
+	color: #34495e;
+	font-size: 20px;
+}
+
+.main-nav a:hover {
+	color: #718daa;
+}
+
+
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #a2a2a2;
+	background-color: #f4f4f4;
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+    z-index: 1;
+}
+
+@media (min-width: 769px) {
+	.header,
+	.main-nav {
+		display: flex;
+	    .header {
+		flex-direction: column;
+		align-items: center;
+    }
+    	.header{
+		width: 80%;
+		margin: 0 auto;
+		max-width: 1150px;
+	}
+}
+}
+
+@media (min-width: 1025px) {
+	.header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+
+}
+
+.profilePicContainer {
+    display: flex;
+    justify-content: center;
+}
+
+.profilePic {
+    height: 350px;
+    width: 250px;
+    border: 10px solid black;
+}
+
+.mainLogo {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 100px;
+}
+
+.mainLogoImage {
+    height: 25%;
+    width: 25%;
+}
+
+#bio h2 {
+    display: block;
+    text-align: center;
+    font-size: 50px;
+}
+
+#bio p {
+    display: block;
+    text-align: center;
+    font-size: 25px;
+}
+
+.wave {
+    display: inline-block;
+    animation-name: wave-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite; 
+    transform-origin: 70% 70%;      
+  }
+  
+  @keyframes wave-animation {
+      0% { transform: rotate( 0.0deg) }
+     10% { transform: rotate(14.0deg) }
+     20% { transform: rotate(-8.0deg) }
+     30% { transform: rotate(14.0deg) }
+     40% { transform: rotate(-4.0deg) }
+     50% { transform: rotate(10.0deg) }
+     60% { transform: rotate( 0.0deg) } 
+    100% { transform: rotate( 0.0deg) }
+  }
+
+
+#techstack {
+    height: auto;
+    width: 100%;
+}
+
+#youtubeVideo {
+    height: auto;
+    width: 100%;
+}
+
+#projects {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: auto;
+    width: 100%;
+    margin: 100px;
+}
+
+.projectsHeader,
+.contactHeader {
+    font-size: 50px;
+    text-align: center;
+    margin: 150px;
+    text-decoration: underline;
+    line-height: 50px;
+}
+
+.project1,
+.project2,
+.project3 {
+    border: 10px solid black;
+    padding: 15px;
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.pacman {
+    width: 350px;
+    height: 350px;
+}
+
+.thomas {
+    width: 350px;
+    height: 350px;
+}
+
+.project3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.eyeMovement {
+    width: 350px;
+    height: 350px;
+}
+
+#userInfo {
+    display: flex;
+    justify-content: space-evenly;
+    height: auto;
+    width: 100%;
+    padding: 25px;
+}
+
+.userInput {
+    border: none;
+    border-bottom: 5px solid black;
+}
+
+.comments {
+    display: flex;
+    justify-content: center;
+    height: auto;
+    padding: 50px;
+}
+
+.textbox {
+    width: 500px;
+    border: 5px solid black;
+    word-wrap: break-word;
+    resize: none;
+}
+
+.submitButton {
+    display: flex;
+    justify-content: center;
+}
+
+input[type=submit] {
+    background-color:black;
+    color: white;
+    padding: 12px 20px;
+    border-radius: 4px;
+    border:none;
+    cursor:pointer;
+}
+
+input[type=submit]:hover {
+    background-color:dimgray;
+}
+
+#status {
+    height: 0px;
+    width: 0px;
+    color: white;
+}
+
+footer {
+    height: 50px;
+    width: 100%;
+    border-top: 5px;
+    border-top-color:chartreuse;
+    font-size: smaller;
+    text-align: center;
+    margin-top: 75px;
+}
