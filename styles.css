@@ -178,17 +178,6 @@ a {
     100% { transform: rotate( 0.0deg) }
   }
 
-
-#techstack {
-    height: auto;
-    width: 100%;
-}
-
-#youtubeVideo {
-    height: auto;
-    width: 100%;
-}
-
 #projects {
     display: flex;
     flex-direction: row;
@@ -223,12 +212,6 @@ a {
 .thomas {
     width: 350px;
     height: 350px;
-}
-
-.project3 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .eyeMovement {
