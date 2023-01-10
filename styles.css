@@ -115,6 +115,16 @@ a {
 
 }
 
+.linkedIn,
+.youtube {
+    margin-right: 25px;
+}
+
+.youtubeDiv {
+    display:inline-flex;
+    flex-direction: row;
+}
+
 .profilePicContainer {
     display: flex;
     justify-content: center;
