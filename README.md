@@ -1,4 +1,4 @@
-# GitHub Pages Web Address: marvin-e.github.io
+# GitHubPages web address: marvin-e.github.io
 
 Hi, this is a portfolio page with a few projects I've worked on, hosted on Github Pages.
 I used HTML, CSS, and Javascript on the site.
